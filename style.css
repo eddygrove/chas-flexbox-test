@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --box-borders: .38vw solid #3d3d3d;;
+  }
+
+#holder {
+    width: 60%;
+    border: var(--box-borders);
+    margin: 8vw auto;
+width: 60%;
+}
+#label {
+    border-bottom: var(--box-borders);
+    padding: 0 .8vw;
+    font-size: 3vw;
+    font-family: 'Patrick Hand','Verdana', sans-serif;;
+    color: #3d3d3d;
+    font-weight:600;
+}
+#container {
+    margin: 1.6vw 2vw 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1.4vw; /* det vertikala avståndet mellan objekt som är barn till flexbox 'container'. Ersätter här margin-bottom */
+}
+header {
+    background-color: #8e7cc3;
+    aspect-ratio: 6 / 1;
+    border: var(--box-borders);
+}
+#cards {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.4vw; /* det horisontella avståndet mellan objekt som är barn till flexbox 'cards'. Ersätter här margin-right e.d. */
+}
+.item1,
+.item2,
+.item3 {
+    border: var(--box-borders);
+    flex-grow: 1; /* 1=alla item-divs växer sig lika stora i tillgängligt utrymme */
+    aspect-ratio: 1 / 1.8;
+}
+.item1 {
+    background-color: #e06665;
+}
+.item2 {
+    background-color: #92c47d;
+}
+.item3 {
+    background-color: #fe9701;
+}   
+
+@media only screen and (max-width: 800px) {
+    #cards  {
+        flex-direction: column;
+        row-gap: 1.4vw;
+    }
+  }
