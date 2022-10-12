@@ -20,6 +20,11 @@ width: 60%;
     color: #3d3d3d;
     font-weight:600;
 }
+
+a {
+    text-decoration: none;
+}
+
 #container {
     margin: 1.6vw 2vw 5vw;
     display: flex;
